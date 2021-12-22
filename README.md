@@ -2,22 +2,23 @@ Hi
 
 This github repository contains code changes to learn about writing a 
 simple Jupyter Kernel called **MyEcho Kernel**. As the name suggests, 
-the kernel will simply return whatever is passed from the Notebook UI.
+the kernel will simply return whatever is passed from the Notebook UI. The kernel is
+a wrapper kernel over the existing `ipykernel` library. More details at [writing swapper kernel](https://jupyter-client.readthedocs.io/en/latest/wrapperkernels.html).
 
 ## Structure of the Project
 1. *echo_kernel* directory contains the actual python code for starting the kernel python process.
 2. *kernel-spec* directory contains the Spec file which will be installed in Jupyter Environment.
-3. *example* directory contains a sample notebook which can be used to test the kernel. \ 
+3. *example* directory contains a sample notebook which can be used to test the kernel. \
    You are free to create a new notebook of your choice.
-4. `Makefile` contains the handy commands which will to setup and test this project. 
+4. `Makefile` contains the handy commands which will to setup and test this project.
 5. `setup.py` is a standard setup file for installing the project.
-6. `requirements.yml` is a standard conda requirements file which contains the python dependencies that are needed.  
+6. `requirements.yml` is a standard conda requirements file which contains the python dependencies that are needed.
 
 ## Pre-requisite
 1. git clone this repository:
 ```python
-git clone <>
-cd echo-kernel
+git clone git@github.com:rahul26goyal/jupyter-echo-kernel.git
+cd jupyter-echo-kernel
 ```
 
 ## Setting up the Env using Make Commands.
@@ -30,7 +31,7 @@ all the libraries required to test this kernel on a Classic Jupyter Notebook UI.
 4. Install the kernel Spec to environment: `make install-echo-kernel-spec`
 5. Verify the kernel spec is available : `jupyter-kernelspec list`
 6. Install Classic Jupyter notebook: `pip instal notebook==6.4.6`
-7.
+7. Start Jupyter Notebook serve: `jupyter notebook --debug`
 
 ## install the kernel to separate notebook env
 This is option 2.
@@ -45,3 +46,6 @@ jupyter-kernelspec list
 ```
 - start jupyter notebook : `jupyter notebook --debug`
 - create a notebook by selecting "MyEchoKernel" or open the notebook present in the `example/` folder.
+
+Thank you reading this!
+If you have any feedback or suggestion, feel free to raise an issue.
