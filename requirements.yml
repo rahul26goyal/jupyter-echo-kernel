@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.8.5
+  - ipykernel==6.1.0

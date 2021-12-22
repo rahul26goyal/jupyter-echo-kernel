@@ -1,0 +1,7 @@
+{
+  "argv": ["python", "-m", "echo_kernel.my_kernel", "-f", "{connection_file}"],
+  "display_name": "MyEchoKernel",
+  "metadata": {
+    "debugger": true
+  }
+}
